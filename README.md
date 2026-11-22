@@ -16,7 +16,7 @@ InventoryManagement/
 │   └── Product.js
 ├── routes/
 │   └── productRoutes.js
-├── .env.example
+├── .env
 ├── .gitignore
 ├── package.json
 ├── package-lock.json (created after npm install)
