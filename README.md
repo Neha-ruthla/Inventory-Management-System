@@ -19,7 +19,8 @@ InventoryManagement/
 ├── .env
 ├── .gitignore
 ├── package.json
-├── package-lock.json (created after npm install)
+|
+|
 └── server.js
 ```
 
@@ -34,8 +35,8 @@ InventoryManagement/
 1. Install Node.js, MongoDB (local server or MongoDB Atlas), and Postman.
 2. Open this project folder in VS Code.
 3. Run `npm install` in the terminal.
-4. Copy `.env.example` and rename the copy to `.env`.
-5. Put your own MongoDB connection string in `.env`.
+4. Put your own MongoDB connection string in `.env`.
+   
 
 Example for local MongoDB:
 
@@ -44,7 +45,6 @@ PORT=5000
 MONGO_URI=mongodb://127.0.0.1:27017/inventoryDB
 ```
 
-Do not upload your real `.env` file or `node_modules` folder to GitHub.
 
 ## Run the server
 
@@ -100,10 +100,3 @@ Choose Body > raw > JSON in Postman:
 - Low-stock report: `GET /api/products/low-stock`
 - Category summary: `GET /api/products/summary`
 
-For routes containing `:id`, replace it with the `_id` returned when a product is created.
-
-For stock adjustment, send JSON such as `{ "change": 10 }` to `PATCH /api/products/PRODUCT_ID`. Use a negative number to reduce stock, for example `-5`.
-
-## GitHub notes
-
-The `.gitignore` file excludes `node_modules/` and `.env`. Upload the source code, `.env.example`, README, and package files. Never commit database passwords or API secrets.
